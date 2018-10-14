@@ -3,7 +3,7 @@
 <head>
     <title>DisRovery</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-wdith, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--bootstrap css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -15,17 +15,165 @@
 <body>
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <!--popper-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
     <!--bootstrap js-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <!--google charts js-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!--aos js-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top shadow">
+        <a class="navbar-brand" href="#">DisRovery</a>
+    </nav>
+    <div class="content mt-5 bg-light">
+        <section id="objective" class="jumbotron my-0">
+            <h1 class="display-1">Objective</h1>
+            <p class="lead">Collect samples and survive as long as you can. </p>
+            <h1 class="display-4">Background</h1>
+            <p class="lead">
+                You have been selected to control an unmanned rover on a foreign planet to collect local mineral samples for further research. <br><br>
+                Supplies have been sent randomly over the planet surface to assist your mission.
+                However, it is not recommended to pick up every supplies on the way since each has its own positive and negative effects on the rover. <br><br>
+                Destination planets each has its own characteristics and potential hazards,
+                while collecting supplies might help, you should pick your rover wisely with the destination in mind.
+            </p>
+            <h1 class="display-4">Game Over</h1>
+            <p class="lead">
+                The game ends under the two conditions,
+            </p>
+            <ul>
+                <li class="lead">Power runs out; or </li>
+                <li class="lead">Shield runs out. </li>
+            </ul>
+        </section>
+        <section id="planets">
+            <section id="mars" class="row p-5 paralax text-light text-lg-right">
+                <div class="col-6 col-lg-3 order-lg-12 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/mars_planet.png" class="embed-responsive-item" data-aos="slide-left" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-lg-6 m-5 p-3 ml-auto overlay rounded" data-aos="slide-right" data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Mars</h1>
+                    <blockquote class="blockquote">Mars is known as the Red Planet. It gets its red color from the iron in its soil. </blockquote>
+                    <footer class="blockquote-footer">NASA</footer>
+                    <div class="row mt-4">
+                        <div class="col-12 col-sm-6 w-50 embed-responsive embed-responsive-1by1">
+                            <img class="embed-responsive-item" src="public/img/mars_screen.png" />
+                        </div>
+                        <table class="col-sm-6 w-50 table">
+                            <tr>
+                                <th>Terrain Feature: </th>
+                                <td>Sand</td>
+                            </tr>
+                            <tr>
+                                <th>Gravity: </th>
+                                <td>Normal</td>
+                            </tr>
+                            <tr>
+                                <th>Collectables: </th>
+                                <td>Standard</td>
+                            </tr>
+                            <tr>
+                                <th>Potential Hazard: </th>
+                                <td>none</td>
+                            </tr>
+                            <tr>
+                                <th>Difficulty: </th>
+                                <td>Beginner</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="pluto" class="row p-5 paralax text-light">
+                <div class="col-6 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/pluto_planet.png" class="embed-responsive-item" data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-lg-6 m-5 p-3 overlay rounded" data-aos="slide-left" data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Pluto</h1>
+                    <blockquote class="blockquote">Pluto is so cold that Earth’s air would freeze into a kind of snow there. </blockquote>
+                    <footer class="blockquote-footer">NASA</footer>
+                    <div class="row mt-4">
+                        <div class="col-12 col-sm-6 w-50 embed-responsive embed-responsive-1by1">
+                            <img class="embed-responsive-item" src="public/img/pluto_screen.png" />
+                        </div>
+                        <table class="col-sm-6 w-50 table">
+                            <tr>
+                                <th>Terrain Feature: </th>
+                                <td>Ice</td>
+                            </tr>
+                            <tr>
+                                <th>Gravity: </th>
+                                <td>Light</td>
+                            </tr>
+                            <tr>
+                                <th>Collectables: </th>
+                                <td>Scarce</td>
+                            </tr>
+                            <tr>
+                                <th>Potential Hazard: </th>
+                                <td>Slips</td>
+                            </tr>
+                            <tr>
+                                <th>Difficulty</th>
+                                <td>Isolation</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="venus" class="row p-5 paralax text-light text-lg-right">
+                <div class="col-6 col-lg-3 my-auto order-lg-12">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/venus_planet.png" class="embed-responsive-item" data-aos="slide-left" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-lg-7 m-5 p-3 ml-auto overlay rounded" data-aos="slide-right" data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Venus</h1>
+                    <blockquote class="blockquote">Venus is a dim world of intense heat and volcanic activity. </blockquote>
+                    <footer class="blockquote-footer">NASA</footer>
+                    <div class="row mt-4">
+                        <div class="col-12 col-sm-6 w-50 embed-responsive embed-responsive-1by1">
+                            <img class="embed-responsive-item" src="public/img/venus_screen.png" />
+                        </div>
+                        <table class="col-sm-6 w-50 table">
+                            <tr>
+                                <th>Terrain Feature: </th>
+                                <td>Lava</td>
+                            </tr>
+                            <tr>
+                                <th>Gravity: </th>
+                                <td>Heavy</td>
+                            </tr>
+                            <tr>
+                                <th>Collectables: </th>
+                                <td>Adequate</td>
+                            </tr>
+                            <tr>
+                                <th>Potential Hazard: </th>
+                                <td>Heat</td>
+                            </tr>
+                            <tr>
+                                <th>Difficulty: </th>
+                                <td>Hell</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
     <div class="mx-auto text-center"><h1>Site building... </h1></div>
-
 </body>
 </html>
