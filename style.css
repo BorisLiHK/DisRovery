@@ -21,6 +21,18 @@
     background-image: url("public/img/venus_terrain.jpg");
 }
 
+#curiosity {
+    background-color: #AAAAAA;
+}
+
+#freespirit, #magnitizer {
+    background-color: #D2D0B9;
+}
+
+#batmobile {
+    background-color: #FFFFFF;
+}
+
 .paralax {
     background-size: cover;
     background-repeat: no-repeat;
