@@ -33,6 +33,10 @@
     background-color: #FFFFFF;
 }
 
+#interface {
+    background-image: url("public/img/game_screen.png");
+}
+
 .paralax {
     background-size: cover;
     background-repeat: no-repeat;
