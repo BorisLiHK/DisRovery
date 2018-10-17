@@ -39,9 +39,15 @@
     background-image: url("public/img/game_screen.png");
 }
 
-.paralax {
+.parallax {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
     background-attachment: fixed;
+}
+
+@media (max-width: 575px) {
+    .parallax {
+        background-image: none !important;
+    }
 }
