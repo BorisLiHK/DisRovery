@@ -52,6 +52,9 @@
                     <a href="#supplies" class="nav-link">Supplies</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#enemies" class="nav-link">Enemies</a>
+                </li>
+                <li class="nav-item">
                     <a href="#interface" class="nav-link">Interface</a>
                 </li>
             </ul>
@@ -354,14 +357,14 @@
                 </p>
             </div>
             <section id="powercell" class="row text-lg-right">
-                <div class="col-6 col-lg-3 order-lg-12">
+                <div class="col-4 col-lg-3 order-lg-12">
                     <a class="embed-responsive embed-responsive-1by1"
                        href="https://3dwarehouse.sketchup.com/model/43c2cc48507a7b74b3628215e327f7d4/Energy-power">
                         <img src="public/img/powercell.png" class="embed-responsive-item"
                              data-aos="slide-left" data-aos-anchor-placement="center-bottom" />
                     </a>
                 </div>
-                <div class="col-6 m-lg-5 pt-3 px-3 ml-lg-auto"
+                <div class="col-8 col-lg-6 m-lg-5 pt-3 px-3 ml-lg-auto"
                      data-aos="slide-right" data-aos-anchor-placement="center-bottom">
                     <h1 class="display-4">Power Cell</h1>
                     <p class="lead">Recharges rover's power with no side effects. </p>
@@ -372,14 +375,14 @@
                 </div>
             </section>
             <section id="engine" class="row">
-                <div class="col-6 col-lg-3">
+                <div class="col-4 col-lg-3">
                     <a class="embed-responsive embed-responsive-1by1"
                        href="https://3dwarehouse.sketchup.com/model/d39e0972d2dd80ab2d555942edc587c3/Ford-engine">
                         <img src="public/img/engine.png" class="embed-responsive-item"
                              data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
                     </a>
                 </div>
-                <div class="col-6 m-lg-5 pt-3 px-3 mr-lg-auto" data-aos="slide-left"
+                <div class="col-8 col-lg-6 m-lg-5 pt-3 px-3 mr-lg-auto" data-aos="slide-left"
                      data-aos-anchor-placement="center-bottom">
                     <h1 class="display-4">Engine</h1>
                     <p class="lead">Increases power consumption in exchange for thrust power. </p>
@@ -390,14 +393,14 @@
                 </div>
             </section>
             <section id="transistor" class="row text-lg-right">
-                <div class="col-6 col-lg-3 order-lg-12">
+                <div class="col-4 col-lg-3 order-lg-12">
                     <a class="embed-responsive embed-responsive-1by1"
                        href="https://3dwarehouse.sketchup.com/model/8fbd3985-8faf-43a6-9923-43d71bdd1403/Réactor-Arc-Iron-Man">
                         <img src="public/img/transistor.png" class="embed-responsive-item"
                              data-aos="slide-left" data-aos-anchor-placement="center-bottom" />
                     </a>
                 </div>
-                <div class="col-6 m-lg-5 pt-3 px-3 ml-lg-auto" data-aos="slide-right"
+                <div class="col-8 col-lg-6 m-lg-5 pt-3 px-3 ml-lg-auto" data-aos="slide-right"
                      data-aos-anchor-placement="center-bottom">
                     <h1 class="display-4">Transistor</h1>
                     <p class="lead">Reduces power consumption and improves recharging rate, but makes rover more vulnerable. </p>
@@ -408,14 +411,14 @@
                 </div>
             </section>
             <section id="toolbox" class="row">
-                <div class="col-6 col-lg-3">
+                <div class="col-4 col-lg-3">
                     <a class="embed-responsive embed-responsive-1by1"
                        href="https://3dwarehouse.sketchup.com/model/4c4f54ce5c27c339b5f815976dd4f6d2/Dewalt-Toughbox-DS300">
                         <img src="public/img/toolbox.png" class="embed-responsive-item"
                              data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
                     </a>
                 </div>
-                <div class="col-6 m-lg-5 pt-3 px-3 mr-lg-auto" data-aos="slide-left"
+                <div class="col-8 col-lg-6 m-lg-5 pt-3 px-3 mr-lg-auto" data-aos="slide-left"
                      data-aos-anchor-placement="center-bottom">
                     <h1 class="display-4">Tools</h1>
                     <p class="lead">Fixes rover's shield and makes rover less vulnerable, but also makes rover heavier and lowers recharge rate. </p>
@@ -427,6 +430,103 @@
             </section>
         </section>
 
+        <section id="enemies" class="bg-dark text-light parallax">
+            <div class="overlay">
+                <div class="jumbotron my-0 overlay">
+                    <h1 class="display-1">Enemies</h1>
+                    <p class="lead">
+                        The enemies reference to the ghosts in the original Pac-man,
+                        each color represents a different behaviour during a chase.
+                    </p>
+                </div>
+            </div>
+
+            <section id="patrol" class="row overlay">
+                <div class="col-4 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/ghost_default.png" class="embed-responsive-item"
+                             data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-8 m-lg-5 pt-3 px-3 overlay rounded" data-aos="slide-left"
+                     data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Patrol</h1>
+                    <p class="lead">When the player is not spotted, ghosts appear in white, patrolling around minerals randomly. </p>
+                    <p>There is a several ways an enemy would get alerted: </p>
+                    <ul>
+                        <li>Direct sight
+                            - when rover appears in the cone of sight not blocked by any obstacles, the enemy would begin chasing; </li>
+                        <li>Engine noise
+                            - when rover makes a noise (thrust) within a sphere bound, the enemy would look around and patrol towards the location; </li>
+                        <li>Alert by others
+                            - when rover is spotted around the enemy, the enemy would begin chasing; and </li>
+                        <li>Mineral disappearance
+                            - when a mineral disappears (collected by rover), the enemies nearby would patrol towards the location. </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="shadow" class="row overlay">
+                <div class="col-4 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/ghost_shadow.png" class="embed-responsive-item"
+                             data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-8 m-lg-5 my-auto pt-3 px-3 overlay rounded" data-aos="slide-left"
+                     data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Shadow</h1>
+                    <p class="lead">The first chasing ghost is always Shadow, appears in red. </p>
+                    <p>Shadow targets the position of the rover during a chase, in other words chases behind the player. </p>
+                </div>
+            </section>
+
+            <section id="speedy" class="row overlay">
+                <div class="col-4 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/ghost_speedy.png" class="embed-responsive-item"
+                             data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-8 m-lg-5 my-auto pt-3 px-3 overlay rounded" data-aos="slide-left"
+                     data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Speedy</h1>
+                    <p class="lead">Speedy is the ghost in pink which always seems to be faster than others since it predicts the rover's destination. </p>
+                    <p>It predicts according to the velocity of the rover and the distance between, avoiding obstacles and slopes ahead. </p>
+                </div>
+            </section>
+
+            <section id="bashful" class="row overlay">
+                <div class="col-4 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/ghost_bashful.png" class="embed-responsive-item"
+                             data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-8 m-lg-5 my-auto pt-3 px-3 overlay rounded" data-aos="slide-left"
+                     data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Bashful</h1>
+                    <p class="lead">Bashful is the unpredictable blue ghost, due to its collaborative behaviour. </p>
+                    <p>It collaborates with the closest chasing ghost to the rover, aiming to ambush the player. </p>
+                </div>
+            </section>
+
+            <section id="pokey" class="row overlay">
+                <div class="col-4 col-lg-3 my-auto">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <img src="public/img/ghost_pokey.png" class="embed-responsive-item"
+                             data-aos="slide-right" data-aos-anchor-placement="center-bottom" />
+                    </div>
+                </div>
+                <div class="col-8 m-lg-5 my-auto pt-3 px-3 overlay rounded" data-aos="slide-left"
+                     data-aos-anchor-placement="center-bottom">
+                    <h1 class="display-4">Pokey</h1>
+                    <p class="lead">Pokey doesn't follow the herd during a chase, in orange skin. </p>
+                    <p>When pokey is within a crowd of chasing ghosts, it teleports to a random location around the player. </p>
+                </div>
+            </section>
+
+        </section>
 
         <section id="interface" class="bg-dark text-light parallax">
             <div class="jumbotron my-0 overlay">
@@ -450,7 +550,7 @@
             <section id="score" class="row">
                 <img src="public/img/score.png" class="col-lg-6 order-lg-12"
                      data-aos="slide-left" data-aos-anchor-placement="center-bottom" />
-                <div class="col-lg-6 mx-3 mx-lg-0 my-auto overlay rounded text-lg-right"
+                <div class="col-lg-6 mx-3 mx-lg-0 pl-lg-5 my-auto overlay rounded"
                      data-aos="slide-right" data-aos-anchor-placement="center-bottom">
                     <h1 class="display-4">Score</h1>
                     <p class="lead">how well you did so far, at a glance at the top right corner. </p>
@@ -541,7 +641,6 @@
 
     <footer class="jumbotron">
         <p class="lead">by Boris. </p>
-        <p><del>and the absence of my teammate, Richard. </del></p>
         <small>
             <p>
                 Credits for the creators of the amazing models in the game,

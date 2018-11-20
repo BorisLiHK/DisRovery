@@ -35,6 +35,10 @@
     background-color: #FFF;
 }
 
+#enemies {
+    background-image: url("public/img/pacman.jpg");
+}
+
 #interface {
     background-image: url("public/img/game_screen.png");
 }
